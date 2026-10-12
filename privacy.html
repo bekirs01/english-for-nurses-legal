@@ -38,7 +38,7 @@
           <p class="kicker">Legal</p>
           <h1>Privacy Policy — English for Nurses</h1>
           <p class="meta">
-            Last updated: 12 October 2026<br />
+            Last updated: 13 October 2026<br />
             Product: English for Nurses: Words<br />
             On-device name: English for Nurses<br />
             iOS bundle ID: com.lingocore.englishForNurses<br />
@@ -72,7 +72,11 @@
           <ul>
             <li>Identifiers of words and phrases you favorite or mark as learned</li>
             <li>Quiz miss history used by Wrong Answers</li>
-            <li>Translation-language, sound, and haptics preferences</li>
+            <li>A daily study-streak count and the last local date it was updated</li>
+            <li>
+              Translation-language, speech-speed, sound-effect, and haptics
+              preferences
+            </li>
             <li>The Apple Watch learning list and study-window settings you choose on iPhone</li>
           </ul>
           <p>
@@ -86,8 +90,10 @@
             Learning progress is stored locally with Flutter
             <code>shared_preferences</code>, which uses the operating system’s
             ordinary app storage (UserDefaults on Apple platforms). Vocabulary,
-            phrases, and dialogues ship inside the app bundle. The developer
-            does not receive a copy of your progress.
+            phrases, dialogues, images, and interface sounds ship inside the
+            app bundle. After installation, study does not need a network
+            connection or a lesson server. The developer does not receive a
+            copy of your progress.
           </p>
 
           <h2>4. Favorites, quiz history, and preferences</h2>
@@ -96,26 +102,50 @@
             <li>Favorite word and phrase IDs</li>
             <li>Learned word and phrase IDs</li>
             <li>Wrong-answer records (content ID, kind, miss count, last quiz type, timestamp)</li>
-            <li>Selected translation language (currently English or Turkish in Settings)</li>
+            <li>Daily streak count and last streak date</li>
+            <li>
+              Selected translation language. Settings currently offers fifteen
+              learner languages for meanings and interface chrome:
+              English, Turkish, Spanish, Arabic, French, German, Russian,
+              Portuguese, Italian, Japanese, Korean, Simplified Chinese,
+              Hindi, Indonesian, and Persian. The language being taught
+              remains English.
+            </li>
+            <li>
+              Speech speed for on-device pronunciation, adjustable from
+              0.5× to 2.0×
+            </li>
             <li>Sound-effect and haptics switches</li>
           </ul>
           <p>
-            You can change favorites, learned marks, sound, and haptics in the
-            app. Wrong Answers updates as you practice. There is no
-            developer-side account page for this data.
+            You can change favorites, learned marks, translation language,
+            speech speed, sound, and haptics in the app. Wrong Answers updates
+            as you practice. There is no developer-side account page for this
+            data.
           </p>
 
           <h2>5. Text-to-speech and audio</h2>
           <p>
             Pronunciation uses on-device speech synthesis through
             <code>flutter_tts</code>. The current product asks the system for
-            an English (United States) voice. The app does not record the
-            microphone and does not operate a network text-to-speech service.
+            an English (United States) voice. This build does not ship separate
+            spoken lesson recordings; words, phrases, dialogues, and the
+            Settings test-voice sample are spoken by the device’s installed
+            voices. The app does not record the microphone and does not
+            operate a network text-to-speech service.
+          </p>
+          <p>
+            Settings includes an adjustable speech-speed control from 0.5× to
+            2.0× (in 0.1 steps; 1.0× is the product learning rate). That
+            preference is stored on the device and applies to iPhone and
+            iPad pronunciation. It does not change interface sound effects
+            and is not used by Apple Watch.
           </p>
           <p>
             Short interface sounds (tap, correct, incorrect, success) play from
             files bundled with the app through <code>audioplayers</code>. They
-            are not patient recordings.
+            are not patient recordings and are separate from the Speech speed
+            setting.
           </p>
           <p>
             Apple, Google, or another voice installed in system Settings may
@@ -133,9 +163,18 @@
           </p>
           <p>
             The Watch keeps a local cache so cards can appear when the iPhone
-            is not nearby. You choose the items on iPhone. The Watch home
-            screen uses the short label “Nurses” because the full product name
-            does not fit a watch icon well.
+            is not nearby. You choose the items on iPhone (up to 24 words or
+            phrases). The Watch home screen uses the short label “Nurses”
+            because the full product name does not fit a watch icon well.
+            Watch chrome can follow the same fifteen translation languages
+            chosen on iPhone; spoken English and speech speed stay on the
+            phone.
+          </p>
+          <p>
+            The Watch shows one card at a time. It does not include the full
+            iPhone course, flashcards, dialogues, quiz, or pronunciation.
+            It may play short bundled tap or result cues, not spoken
+            vocabulary.
           </p>
           <p>
             A study-window control exists on iPhone. The current source does
@@ -240,7 +279,7 @@
           </p>
 
           <h2>15. Last updated</h2>
-          <p>12 October 2026</p>
+          <p>13 October 2026</p>
         </article>
       </div>
     </main>

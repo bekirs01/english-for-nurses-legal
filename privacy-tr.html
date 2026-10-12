@@ -38,7 +38,7 @@
           <p class="kicker">Yasal</p>
           <h1>Gizlilik Politikası — English for Nurses</h1>
           <p class="meta">
-            Son güncelleme: 12 Ekim 2026<br />
+            Son güncelleme: 13 Ekim 2026<br />
             Ürün: English for Nurses: Words<br />
             Cihazda görünen ad: English for Nurses<br />
             iOS paket kimliği: com.lingocore.englishForNurses<br />
@@ -72,7 +72,11 @@
           <ul>
             <li>Favorilere eklediğiniz veya öğrenildi işaretlediğiniz kelime ve ifade kimlikleri</li>
             <li>Yanlış Cevaplar ekranında kullanılan quiz hata geçmişi</li>
-            <li>Çeviri dili, ses ve dokunsal geri bildirim tercihleri</li>
+            <li>Günlük çalışma serisi sayısı ve en son güncellendiği yerel tarih</li>
+            <li>
+              Çeviri dili, konuşma hızı, ses efekti ve dokunsal geri bildirim
+              tercihleri
+            </li>
             <li>iPhone’da seçtiğiniz Apple Watch öğrenme listesi ve çalışma aralığı ayarları</li>
           </ul>
           <p>
@@ -86,8 +90,10 @@
             Öğrenme ilerlemesi Flutter <code>shared_preferences</code> ile
             yerel olarak saklanır; Apple platformlarında bu, işletim
             sisteminin sıradan uygulama deposunu (UserDefaults) kullanır.
-            Kelime, ifade ve diyalog içeriği uygulama paketinin içindedir.
-            Geliştirici ilerlemenizin bir kopyasını almaz.
+            Kelime, ifade, diyalog, görseller ve arayüz sesleri uygulama
+            paketinin içindedir. Kurulumdan sonra çalışma için ağ bağlantısı
+            veya ders sunucusu gerekmez. Geliştirici ilerlemenizin bir kopyasını
+            almaz.
           </p>
 
           <h2>4. Favoriler, quiz geçmişi ve tercihler</h2>
@@ -96,27 +102,46 @@
             <li>Favori kelime ve ifade kimlikleri</li>
             <li>Öğrenildi işaretli kelime ve ifade kimlikleri</li>
             <li>Yanlış cevap kayıtları (içerik kimliği, tür, hata sayısı, son quiz türü, zaman damgası)</li>
-            <li>Seçilen çeviri dili (Ayarlar’da şu anda İngilizce veya Türkçe)</li>
+            <li>Günlük seri sayısı ve son seri tarihi</li>
+            <li>
+              Seçilen çeviri dili. Ayarlar şu anda anlamlar ve arayüz için on
+              beş öğrenen dili sunar: İngilizce, Türkçe, İspanyolca, Arapça,
+              Fransızca, Almanca, Rusça, Portekizce, İtalyanca, Japonca,
+              Korece, Basitleştirilmiş Çince, Hintçe, Endonezce ve Farsça.
+              Öğretilen dil İngilizce kalır.
+            </li>
+            <li>
+              Cihaz içi telaffuz için konuşma hızı, 0,5× ile 2,0× arasında
+              ayarlanabilir
+            </li>
             <li>Ses efekti ve dokunsal geri bildirim anahtarları</li>
           </ul>
           <p>
-            Favorileri, öğrenildi işaretlerini, sesi ve dokunsal geri bildirimi
-            uygulamadan değiştirebilirsiniz. Yanlış Cevaplar, pratik yaptıkça
-            güncellenir. Bu veri için geliştirici tarafında bir hesap sayfası
-            yoktur.
+            Favorileri, öğrenildi işaretlerini, çeviri dilini, konuşma hızını,
+            sesi ve dokunsal geri bildirimi uygulamadan değiştirebilirsiniz.
+            Yanlış Cevaplar, pratik yaptıkça güncellenir. Bu veri için
+            geliştirici tarafında bir hesap sayfası yoktur.
           </p>
 
           <h2>5. Metinden sese ve ses</h2>
           <p>
             Telaffuz, <code>flutter_tts</code> ile cihaz üzerindeki konuşma
             sentezini kullanır. Mevcut ürün sistemden İngilizce (Amerika
-            Birleşik Devletleri) bir ses ister. Uygulama mikrofon kaydı
-            yapmaz ve ağ üzerinden metinden sese hizmeti işletmez.
+            Birleşik Devletleri) bir ses ister. Bu sürüm ayrı konuşulan ders
+            kayıtları içermez; kelimeler, ifadeler, diyaloglar ve Ayarlar’daki
+            ses denemesi, cihazda yüklü seslerle okunur. Uygulama mikrofon
+            kaydı yapmaz ve ağ üzerinden metinden sese hizmeti işletmez.
+          </p>
+          <p>
+            Ayarlar’da 0,5× ile 2,0× arasında (0,1 adımlarla; 1,0× ürünün
+            öğrenme hızıdır) ayarlanabilir bir konuşma hızı vardır. Bu tercih
+            cihazda saklanır ve iPhone ile iPad telaffuzuna uygulanır. Arayüz
+            ses efektlerini değiştirmez ve Apple Watch tarafından kullanılmaz.
           </p>
           <p>
             Kısa arayüz sesleri (dokunma, doğru, yanlış, başarı) uygulama ile
             birlikte gelen dosyalardan <code>audioplayers</code> ile çalınır.
-            Bunlar hasta kaydı değildir.
+            Bunlar hasta kaydı değildir ve Konuşma hızı ayarından ayrıdır.
           </p>
           <p>
             Sistem Ayarları’na yüklediğiniz Apple, Google veya başka bir ses
@@ -134,9 +159,17 @@
           </p>
           <p>
             Saat, iPhone yakında olmasa da kartların görünebilmesi için yerel
-            bir önbellek tutar. Öğeleri iPhone’dan seçersiniz. Saat ana
-            ekranında kısa etiket olarak “Nurses” kullanılır; tam ürün adı
-            saat simgesine sığmaz.
+            bir önbellek tutar. Öğeleri iPhone’dan seçersiniz (en fazla 24
+            kelime veya ifade). Saat ana ekranında kısa etiket olarak
+            “Nurses” kullanılır; tam ürün adı saat simgesine sığmaz. Saat
+            arayüzü, iPhone’da seçilen on beş çeviri dilini izleyebilir;
+            konuşulan İngilizce ve konuşma hızı telefonda kalır.
+          </p>
+          <p>
+            Saat bir kartı gösterir. Tam iPhone kursunu, flashcard’ı,
+            diyalogları, quiz’i veya telaffuzu içermez. Kısa paketlenmiş
+            dokunma veya sonuç ipuçları çalabilir; konuşulan kelime dağarcığı
+            çalmaz.
           </p>
           <p>
             iPhone’da bir çalışma aralığı denetimi vardır. Mevcut kaynak kodu
@@ -148,40 +181,39 @@
           <p>Mevcut uygulamadaki çalışma zamanı kitaplıkları:</p>
           <ul>
             <li>Flutter ve Dart SDK</li>
-            <li>Yerel anahtar-değer deposu için <code>shared_preferences</code></li>
-            <li>Paket içi ses efektleri için <code>audioplayers</code></li>
+            <li>Yerel anahtar-değer depolama için <code>shared_preferences</code></li>
+            <li>Paketlenmiş ses efektleri için <code>audioplayers</code></li>
             <li>Cihaz içi konuşma için <code>flutter_tts</code></li>
             <li>Metin işleme için <code>characters</code></li>
           </ul>
           <p>
             Bunlar cihazda çalışır. Bu uygulama onları analitik olarak
             kullanmaz. <code>audioplayers</code> genel olarak uzak ses
-            indirebilir, ancak bu ürün yalnızca paket içi dosyaları çalar.
-            <code>http</code> paketi yalnızca geçiş bağımlılığı olarak
-            görünür; uygulamanın kendi Dart kodu onu kullanmaz.
+            indirebilir, ancak bu ürün yalnızca paketlenmiş dosyaları çalar.
+            <code>http</code> paketi yalnızca geçiş bağımlılığı olarak görünür
+            ve uygulamanın kendi Dart kodu tarafından kullanılmaz.
           </p>
           <p>
-            Bu site GitHub Pages üzerinde barındırılır. Bu sayfaları ziyaret
-            etmek GitHub’ın kendi koşulları altında sıradan web günlükleri
-            işlemesine yol açabilir. Mobil uygulamanın çalışması için bu siteye
-            ihtiyaç yoktur.
+            Bu site GitHub Pages’te barındırılır. Bu sayfaları ziyaret etmek
+            GitHub’ın kendi koşulları altında olağan web günlüklerini işlemesine
+            yol açabilir. Mobil uygulamanın çalışması için bu site gerekmez.
           </p>
 
           <h2>8. Analitik, reklam ve izleme</h2>
           <p>
-            Mevcut derlemede analitik, reklam, ilişkilendirme veya izleme
-            SDK’sı yoktur. Uygulama içi gizlilik metni reklam olmadığını ve
-            analitik ya da izleme olmadığını belirtir. App Tracking
-            Transparency istemi yoktur, çünkü uygulama sizi başka şirketlerin
-            uygulamaları veya siteleri arasında izlemez.
+            Mevcut sürüm analitik, reklam, atıf veya izleme SDK’sı içermez.
+            Uygulama içi gizlilik metni reklam ve analitik veya izleme
+            olmadığını belirtir. App Tracking Transparency istemi yoktur,
+            çünkü uygulama sizi başka şirketlerin uygulamaları veya siteleri
+            arasında izlemez.
           </p>
 
           <h2>9. Veri paylaşımı</h2>
           <p>
             Geliştirici öğrenme verisini satmaz ve ilerlemenizi alan bir
-            sunucu işletmez. WatchConnectivity, öğrenme listesini yalnızca
-            eşleşmiş Apple Watch’unuzla paylaşır. Desteğe GitHub Issues
-            üzerinden yazarsanız GitHub bu iletinin altyapısında işler.
+            sunucu işletmez. WatchConnectivity öğrenme listesini yalnızca
+            eşleşmiş Apple Watch’unuzla paylaşır. Destek için GitHub Issues
+            kullanırsanız GitHub o iletiyi kendi altyapısında işler.
           </p>
           <p>
             Apple veya Google, App Store satın almalarını, cihaz yedeklerini
@@ -191,10 +223,10 @@
 
           <h2>10. Veri güvenliği</h2>
           <p>
-            Yerel değerler işletim sisteminin uygulama korumalı alanında
-            tutulur. Cihaz parolası veya biyometrik kilit açık tutun. Hiçbir
-            yöntem tamamen güvenli değildir. Bu politika bir güvenlik
-            sertifikası iddia etmez.
+            Yerel değerler işletim sistemi uygulama sanal alanında durur. Cihaz
+            parolası veya biyometrik kilit açık tutun. Hiçbir yöntem tamamen
+            güvenli değildir. Bu politika bir güvenlik belgesi iddiasında
+            bulunmaz.
           </p>
 
           <h2>11. Saklama ve silme</h2>
@@ -239,7 +271,7 @@
           </p>
 
           <h2>15. Son güncelleme</h2>
-          <p>12 Ekim 2026</p>
+          <p>13 Ekim 2026</p>
         </article>
       </div>
     </main>
