@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — English for Nurses</title>
+    <meta
+      name="description"
+      content="Privacy Policy for English for Nurses. Learning progress stays on the device. No accounts, analytics, advertisements, or developer backend."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="top">
+      <div class="top-inner">
+        <a class="brand" href="index.html">
+          <span class="mark" aria-hidden="true"></span>
+          <span class="brand-name">
+            English for Nurses
+            <small>Words for clinical English</small>
+          </span>
+        </a>
+        <nav aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="privacy.html" aria-current="page">Privacy</a>
+          <a href="support.html">Support</a>
+          <span class="lang" aria-label="Language">
+            <a href="privacy.html" aria-current="page">EN</a>
+            <a href="privacy-tr.html">TR</a>
+          </span>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="page">
+      <div class="wrap">
+        <article class="panel">
+          <p class="kicker">Legal</p>
+          <h1>Privacy Policy — English for Nurses</h1>
+          <p class="meta">
+            Last updated: 12 October 2026<br />
+            Product: English for Nurses: Words<br />
+            On-device name: English for Nurses<br />
+            iOS bundle ID: com.lingocore.englishForNurses<br />
+            Android application ID: com.lingocore.english_for_nurses<br />
+            watchOS bundle ID: com.lingocore.englishForNurses.watchkitapp
+          </p>
+          <hr class="rule" />
+
+          <h2>1. Introduction</h2>
+          <p>
+            This policy describes how English for Nurses handles information in
+            the current iPhone, iPad, Android, and Apple Watch companion
+            design. The app is an educational English-learning tool for nurses
+            and nursing students. It does not provide medical advice,
+            diagnosis, treatment, or clinical decision support.
+          </p>
+          <p>
+            The app is designed to work offline. It does not require an
+            account and does not include a developer-operated cloud service
+            for lessons, progress, or login.
+          </p>
+
+          <h2>2. Information the application handles</h2>
+          <p>
+            A source-code review of the current build found no user accounts,
+            no authentication, no developer backend, no advertising SDK, no
+            analytics SDK, no crash-reporting service that transmits data to
+            the developer, and no remote lesson API.
+          </p>
+          <p>The app may keep the following on the device you use:</p>
+          <ul>
+            <li>Identifiers of words and phrases you favorite or mark as learned</li>
+            <li>Quiz miss history used by Wrong Answers</li>
+            <li>Translation-language, sound, and haptics preferences</li>
+            <li>The Apple Watch learning list and study-window settings you choose on iPhone</li>
+          </ul>
+          <p>
+            These values are content IDs and settings. They are not a name,
+            email address, phone number, payment card, precise location, or
+            health record collected by the developer.
+          </p>
+
+          <h2>3. Local storage and learning progress</h2>
+          <p>
+            Learning progress is stored locally with Flutter
+            <code>shared_preferences</code>, which uses the operating system’s
+            ordinary app storage (UserDefaults on Apple platforms). Vocabulary,
+            phrases, and dialogues ship inside the app bundle. The developer
+            does not receive a copy of your progress.
+          </p>
+
+          <h2>4. Favorites, quiz history, and preferences</h2>
+          <p>The same on-device store may hold:</p>
+          <ul>
+            <li>Favorite word and phrase IDs</li>
+            <li>Learned word and phrase IDs</li>
+            <li>Wrong-answer records (content ID, kind, miss count, last quiz type, timestamp)</li>
+            <li>Selected translation language (currently English or Turkish in Settings)</li>
+            <li>Sound-effect and haptics switches</li>
+          </ul>
+          <p>
+            You can change favorites, learned marks, sound, and haptics in the
+            app. Wrong Answers updates as you practice. There is no
+            developer-side account page for this data.
+          </p>
+
+          <h2>5. Text-to-speech and audio</h2>
+          <p>
+            Pronunciation uses on-device speech synthesis through
+            <code>flutter_tts</code>. The current product asks the system for
+            an English (United States) voice. The app does not record the
+            microphone and does not operate a network text-to-speech service.
+          </p>
+          <p>
+            Short interface sounds (tap, correct, incorrect, success) play from
+            files bundled with the app through <code>audioplayers</code>. They
+            are not patient recordings.
+          </p>
+          <p>
+            Apple, Google, or another voice installed in system Settings may
+            process speech according to that engine’s own behavior. Enhanced or
+            downloaded voices are managed by the operating system, not by a
+            developer server. The Apple Watch companion does not play
+            pronunciation audio.
+          </p>
+
+          <h2>6. Apple Watch synchronization</h2>
+          <p>
+            If you use the companion app, iPhone and Apple Watch exchange a
+            learning list with WatchConnectivity. That transfer stays between
+            your paired devices. It is not a developer cloud account.
+          </p>
+          <p>
+            The Watch keeps a local cache so cards can appear when the iPhone
+            is not nearby. You choose the items on iPhone. The Watch home
+            screen uses the short label “Nurses” because the full product name
+            does not fit a watch icon well.
+          </p>
+          <p>
+            A study-window control exists on iPhone. The current source does
+            not schedule operating-system notifications and does not include a
+            notification SDK. Do not expect timed Watch alerts from this
+            version.
+          </p>
+
+          <h2>7. Third-party services and SDKs</h2>
+          <p>Runtime libraries in the current app include:</p>
+          <ul>
+            <li>Flutter and Dart SDK</li>
+            <li><code>shared_preferences</code> for local key-value storage</li>
+            <li><code>audioplayers</code> for bundled sound effects</li>
+            <li><code>flutter_tts</code> for on-device speech</li>
+            <li><code>characters</code> for text handling</li>
+          </ul>
+          <p>
+            They run on the device. This app does not use them as analytics.
+            <code>audioplayers</code> can fetch remote audio in general, but
+            this product plays only bundled files. The <code>http</code>
+            package appears only as a transitive dependency and is not used by
+            the app’s own Dart code.
+          </p>
+          <p>
+            This website is hosted on GitHub Pages. Visiting these pages may
+            cause GitHub to process ordinary web logs under GitHub’s terms. The
+            mobile app does not need this website in order to function.
+          </p>
+
+          <h2>8. Analytics, advertisements, and tracking</h2>
+          <p>
+            The current build does not include analytics, advertising,
+            attribution, or tracking SDKs. In-app privacy copy states that
+            there is no advertising and no analytics or tracking. There is no
+            App Tracking Transparency prompt, because the app does not track
+            you across other companies’ apps or websites.
+          </p>
+
+          <h2>9. Data sharing</h2>
+          <p>
+            The developer does not sell learning data and does not operate a
+            server that receives your progress. WatchConnectivity shares a
+            learning list only with your paired Apple Watch. If you contact
+            support through GitHub Issues, GitHub processes that message on its
+            infrastructure.
+          </p>
+          <p>
+            Apple or Google may process App Store purchases, device backups,
+            and system speech according to their own policies. Those services
+            are not operated by this app.
+          </p>
+
+          <h2>10. Data security</h2>
+          <p>
+            Local values use the operating-system app sandbox. Keep a device
+            passcode or biometric lock enabled. No method is perfectly secure.
+            This policy does not claim a security certification.
+          </p>
+
+          <h2>11. Data retention and deletion</h2>
+          <p>
+            On-device study data remains until you change it in the app or
+            remove the app. Deleting English for Nurses from iPhone, iPad,
+            Android, or Apple Watch removes local learning data on that
+            device, unless the operating system restores it from a backup you
+            already made (for example an iCloud or computer backup of the app
+            container). The developer does not keep a cloud copy to erase on a
+            server.
+          </p>
+
+          <h2>12. Children’s privacy</h2>
+          <p>
+            The app is an educational product. It does not collect personal
+            information from children for accounts, advertising, or analytics.
+            If you write for support, do not include a child’s name, school,
+            or contact details; describe the product problem only.
+          </p>
+
+          <h2>13. Policy updates</h2>
+          <p>
+            If a later version adds accounts, cloud sync, in-app purchases
+            that collect account data, analytics, advertising, or networked
+            speech, this policy will be updated and the last-updated date will
+            change.
+          </p>
+
+          <h2>14. Contact and support</h2>
+          <p>
+            Questions about this policy can be opened as a GitHub Issue on the
+            public legal repository (a GitHub account is required):
+          </p>
+          <p>
+            <a href="https://github.com/bekirs01/english-for-nurses-legal/issues"
+              >github.com/bekirs01/english-for-nurses-legal/issues</a
+            >
+          </p>
+          <p>
+            No separate support email address is published in the current
+            project files. See also the
+            <a href="support.html">Support</a> page.
+          </p>
+
+          <h2>15. Last updated</h2>
+          <p>12 October 2026</p>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <div class="foot-inner">
+        <span>English for Nurses: Words</span>
+        <span>
+          <a href="privacy.html">Privacy</a>
+          ·
+          <a href="support.html">Support</a>
+          ·
+          <a href="privacy-tr.html">Türkçe</a>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
